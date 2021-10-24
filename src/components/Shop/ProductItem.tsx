@@ -12,6 +12,8 @@ interface ProductItemProps {
 const ProductItem: FC<ProductItemProps> = (props) => {
   const item: ProdItem = props.item;
 
+  const cart = useAppSelector((state) => state.cart);
+
   const dispatch = useAppDispatch();
 
   const addToCartHandler = () => {
